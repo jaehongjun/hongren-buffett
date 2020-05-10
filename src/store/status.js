@@ -1,0 +1,6 @@
+export const STATUS = {
+  INDEX: "INDEX",
+  REQUESTED: "REQUESTED",
+  SUCCEEDED: "SUCCEEDED",
+  FAILED: "FAILED",
+};
