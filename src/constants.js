@@ -96,7 +96,7 @@ export const saveStoreStackMaximum = 100;
 // 자전거래 예상체크 금액
 export const checkSelfTradePrice = 3000;
 // 리스트 중 반복되는 자전거래가 몇 개 였는지 체크
-export const checkSelfTrade = 60;
+export const checkSelfTrade = 65;
 // 현재 가격 상승률 %
 export const checkTodayRise = 4;
 // 1회 구입비용
