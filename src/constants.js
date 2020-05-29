@@ -76,7 +76,7 @@ export const DETECT_COIN_LIST = [
   "KRW-TTC",
   "KRW-AERGO",
   "KRW-ATOM",
-  "KRW-TT",
+  // "KRW-TT",
   "KRW-CRE",
   "KRW-SOLVE",
   "KRW-MBL",
@@ -87,16 +87,16 @@ export const DETECT_COIN_LIST = [
   "KRW-MLK",
   "KRW-STPT",
   "KRW-ORBS",
-  "KRW-VET",
+  // "KRW-VET",
   "KRW-CHZ",
   "KRW-PXL",
 ];
 // 체크할 최근 거래내역 리스트갯수
-export const saveStoreStackMaximum = 100;
+export const saveStoreStackMaximum = 70;
 // 자전거래 예상체크 금액
 export const checkSelfTradePrice = 3000;
 // 리스트 중 반복되는 자전거래가 몇 개 였는지 체크
-export const checkSelfTrade = 65;
+export const checkSelfTrade = 45;
 // 현재 가격 상승률 %
 export const checkTodayRise = 4;
 // 1회 구입비용

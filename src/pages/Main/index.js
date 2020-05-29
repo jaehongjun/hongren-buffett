@@ -3,6 +3,13 @@ import SocketHook from "../../hooks/SocketHook";
 
 const Main = () => {
   const [socketSwitch, setSocketSwitch] = useState(false);
+  // useEffect(() => {
+
+  //   return () => {
+  //     cleanup
+  //   }
+  // }, [input])
+
   SocketHook(socketSwitch);
 
   const socketHandler = () => {
