@@ -18,7 +18,7 @@ const Main = () => {
 
   return (
     <div>
-      <button onClick={socketHandler}>{`Socket 스위치 ${String(
+      <button onClick={socketHandler}>{`ㅎㅐ 스위치 ${String(
         socketSwitch
       )}`}</button>
     </div>
