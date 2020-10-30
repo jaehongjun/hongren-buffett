@@ -11,18 +11,20 @@ const Main = () => {
     }, [startSwitch])
     useEffect(() => {
         setInterval(() => {
-            Axios.get('https://ccx.upbit.com/api/v1/marketing/event/detail?uuid=36cdd133-767a-4b08-8801-60128014035f').then(result => {
+            Axios.get('https://ccx.upbit.com/api/v1/marketing/events').then(result => {
 
-                // console.log(result.data) 
-                const { data } = result
+                const { data: dataArray } = result
 
+                dataArray.map((data) => {
 
-                if (data.currency !== "" && data.currency !== localStorage.getItem("currency")) {
-                    console.log(data.currency, localStorage.getItem("currency"), data.currency !== localStorage.getItem("currency"));
-                    localStorage.setItem('currency', data.currency);
-                    console.log(data);
-                    Axios.post(`${SERVER_URL}/v1/event-trade`, { market: data.market })
+                    if (data.currency !== "" && data.currency !== localStorage.getItem("currency") && data.currency !== "BTC") {
+                        console.log(data.currency, localStorage.getItem("currency"), data.currency !== localStorage.getItem("currency"));
+                        localStorage.setItem('currency', data.currency);
+                        console.log(data);
+                        Axios.post(`${SERVER_URL}/v1/event-trade`, { market: data.market })
+                    }
                 }
+                )
 
             })
         }, 1000);
